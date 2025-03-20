@@ -46,7 +46,7 @@ include_directories(SYSTEM ${CMAKE_CUDA_TOOLKIT_INCLUDE_DIRECTORIES})
 # Ideally, I would have liked to have just a single object, however this caused run-time errors.
 # We compile the first *without* the separable code flag, and the second with. This is the only way
 # I've managed to get things working so far.
-add_nvblox_static_library(nvblox_gpu_hash
+add_nvblox_shared_library(nvblox_gpu_hash
   SOURCE_FILES
     src/core/error_check.cu
     src/utils/timing.cpp
